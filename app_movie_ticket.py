@@ -30,16 +30,16 @@ if st.button("Book Ticket"):
         if customer_name.strip() == "":
             raise ValueError("Customer name cannot be empty!")
 
-        # Output
+        # Display output
         st.success("Ticket booked successfully!")
 
         st.subheader("Booking Information")
-        st.write(f"Customer Name : {customer_name}")
-        st.write(f"Movie Title   : {movie_title}")
-        st.write(f"Show Time     : {show_time}")
-        st.write(f"Seat Type     : {seat_type}")
+        st.write("Customer Name :", customer_name)
+        st.write("Movie Title :", movie_title)
+        st.write("Show Time :", show_time)
+        st.write("Seat Type :", seat_type)
 
-except ValueError as e:
+    except ValueError as e:
         st.error(e)
 
     except Exception:
